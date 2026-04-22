@@ -106,6 +106,19 @@ const CheckoutPage = () => {
                 <span className="text-5xl font-black text-slate-900 tracking-tight">₹{cartTotal}</span>
             </div>
 
+            {/* === PAYMENT QR CODE SECTION === */}
+            <div className="bg-green-50 border-2 border-green-200 rounded-3xl p-6 flex flex-col items-center gap-3 mb-6">
+              <p className="font-black text-green-800 text-lg">Scan & Pay via UPI</p>
+              <img
+                src="https://i.ibb.co/Wvv148bN/Screenshot-2026-04-22-093746.png"
+                alt="UPI Payment QR Code"
+                className="w-52 h-52 object-contain rounded-2xl border border-green-200 shadow-md"
+              />
+              <p className="text-green-700 font-semibold text-sm text-center">
+                Scan the QR code to pay ₹{cartTotal} before placing your order
+              </p>
+            </div>
+
             <button disabled={loading} className="w-full min-h-[72px] bg-gradient-to-r from-orange-500 to-amber-500 text-white py-5 rounded-full font-extrabold text-2xl hover:from-orange-600 hover:to-amber-600 shadow-xl shadow-orange-500/40 hover:shadow-orange-500/60 transition-all duration-300 active:scale-[0.98] flex items-center justify-center gap-3 border border-orange-400">
                 {loading ? <Loader className="animate-spin" size={28} /> : <>Confirm Order <ChevronRight size={28} /></>}
             </button>
